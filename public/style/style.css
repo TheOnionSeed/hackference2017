@@ -16,7 +16,10 @@ html{
 }
 
 .orangeOpacity{
-	background:rgba(255, 102, 0, .8);
+	background:rgba(255, 102, 0, .85);
+}
+.indexhover:hover{
+	color:#cccccc;
 }
 
 #customerbtn:hover{

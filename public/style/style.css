@@ -2,3 +2,8 @@ html{
 	background: url(../image/login.jpeg) no-repeat center center fixed;
   background-size: cover;
 }
+.opacity {
+  background: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  opacity: .9;
+}

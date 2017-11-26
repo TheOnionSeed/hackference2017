@@ -1,7 +1,8 @@
 html{
 	background: url(../image/login.jpeg) no-repeat center center fixed;
-  background-size: cover;
+ 	background-size: cover;
 }
+
 #opacity {
   background:rgba(77, 77, 77, .7);
 }

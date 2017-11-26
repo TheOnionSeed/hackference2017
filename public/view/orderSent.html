@@ -18,6 +18,8 @@
 		<!--favicon-->
 		<link rel="icon"  type="image/png" href="../image/icon.png">
 
+		<script type="text/javascript" src="../script/jquery.countdown.js"></script>
+		<script type="text/javascript" src="../script/jquery.countdown.min.js"></script>
 		<title>Fast Munch</title>
 	</head>
 	<body>
@@ -29,6 +31,29 @@
 			<div class="center" style="padding-top: 50px">
 				<span class="white-text">Congratulations! Your order has been placed! </span>
 			</div>
+			<div class="center" style="padding-top: 10px;">
+				<h4 class="white-text">Estimated Wait Time:</h4>
+				<div class="countdown white-text" style="margin-bottom: 20px;">
+				  <span id="clock"></span>
+				</div>
+				<script type="text/javascript">
+					$('#clock').countdown('2017/11/26 17:30:00')
+						.on('update.countdown', function(event) {
+						  var format = '%H:%M:%S';
+						  if(event.offset.totalDays > 0) {
+						    format = '%-d day%!d ' + format;
+						  }
+						  if(event.offset.weeks > 0) {
+						    format = '%-w week%!w ' + format;
+						  }
+						  $(this).html(event.strftime(format));
+						})
+						.on('finish.countdown', function(event) {
+						  $(this).html('This offer has expired!')
+						    .parent().addClass('disabled');
+
+						});
+				</script>
 		</div>
 		<center>
 			<a href="pay.html" class="btn wave-effect orange darken-1">Pay Now</a>

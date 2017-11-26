@@ -29,6 +29,10 @@
 					<th >Item Name:</th>
 					<th >Description:</th>
 					<th >Price:</th>
+					<th>#</th>
+					<th></th>
+					<th></th>
+					 
 				</tr>
 
 				<!--Item-->
@@ -36,16 +40,20 @@
 					<td>Spaghetii</td>
 					<td>Andies spaghetii dish is the best!</td>
 					<td>$12.01</td>
-					
-						<th class="white-text">
+					<th>1</th>
+					<th class="white-text">
 						<a class="modal-trigger" href="#modal1"> 
-						
 							<div style="padding-top:10%;" id="addFoodEntry"><img src="../image/moreOptions.png" height="35" width="35">
 							</div>
 						</a>
-						</th>
-				
-
+					</th>
+					<th>
+						<a class="modal-trigger" href="#modal2"> 
+							<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptionsMinus.png" height="35" width="35">
+							</div>
+						</a>
+					</th>
+					
 				</tr>
 
 				<!--Item-->
@@ -53,7 +61,20 @@
 					<td>Rice</td>
 					<td>Andies famouse rice dish!</td>
 					<td>$10.00</td>
-					<th class="white-text"><div style="padding-top:10%;" id="addFoodEntry"><img src="../image/moreOptions.png" height="35" width="35"></div></th>
+					<th>0</th>
+					<th class="white-text">
+						<a class="modal-trigger" href="#modal1"> 
+							<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptions.png" height="35" width="35">
+							</div>
+						</a>
+					</th>
+					<th>
+						<a class="modal-trigger" href="#modal2"> 
+							<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptionsMinus.png" height="35" width="35">
+							</div>
+						</a>
+					</th>
+				
 				</tr>
 
 				<!--Item-->
@@ -61,24 +82,69 @@
 					<td>Pho</td>
 					<td>Andies famouse pho dish!</td>
 					<td>$15.00</td>
-					<th class="white-text"><div style="padding-top:10%;" id="addFoodEntry"><img src="../image/moreOptions.png" height="35" width="35"></div></th>
-
+					<th>1</th>
+					<th class="white-text">
+						<a class="modal-trigger" href="#modal1"> 
+							<div style="padding-top:10%;" id="addFoodEntry"><img src="../image/moreOptions.png" height="35" width="35">
+							</div>
+						</a>
+					</th>
+					<th>
+						<a class="modal-trigger" href="#modal2"> 
+							<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptionsMinus.png" height="35" width="35">
+							</div>
+						</a>
+					</th>
 				</tr>
 			</table>
 		</div>
-		  <!-- Modal Trigger -->
-		  <!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>-->
 
 		  <!-- Modal Structure -->
 		  <div id="modal1" class="modal">
 		    <div class="modal-content">
-		      <h4>Modal Header</h4>
-		      <p>A bunch of text</p>
+		      	<h4>Special Requirements ??</h4>
+		      	<textarea id="textBox" rows="8" cols="50"></textarea>
 		    </div>
 		    <div class="modal-footer">
-		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="textBoxBtn">Submit</a>
+		       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="textBoxBtn">Cancel</a>
 		    </div>
 		  </div>
+
+		  <!-- Modal Structure -->
+		  <div id="modal2" class="modal">
+		    <div class="modal-content">
+		      	<h4>Removing Item From Order</h4>
+		      	<table>
+		      		<tr>
+			      		<th >Item Name:</th>
+						<th >Description:</th>	
+						<th>
+						</th>
+		      		</tr>
+		      		<tr>
+		      			<th>Andies famouse pho dish!</th>
+		      			<th>No Broth</th>
+		      			<th>
+		      				<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptionsMinusBlack.png" height="35" width="35">
+							</div>
+		      			</th>
+		      		</tr>
+		      		<tr>
+		      			<th>Spaghetii</th>
+		      			<th>No Sauce</th>
+		      			<th>
+		      				<div style="padding-top:10%;" id="removeFoodEntry"><img src="../image/moreOptionsMinusBlack.png" height="35" width="35">
+							</div>
+		      			</th>
+		      		</tr>
+		      	</table>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+		    </div>
+		  </div>
+         
          
 		<center><a><div class="btn orange darken-2">Submit</div></a></center>
 		
